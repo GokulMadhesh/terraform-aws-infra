@@ -42,7 +42,7 @@ variable "ami_id" {
 }
 
 variable "jenkins_ip" {
-  description = "Public IP address of Jenkins server (for SSH access)"
+  description = "13.201.92.167"
   type        = string
   
   validation {
