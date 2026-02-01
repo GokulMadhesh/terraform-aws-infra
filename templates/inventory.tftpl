@@ -1,15 +1,12 @@
-
 [apache_servers]
-%{ for ip in apache_ips ~}
+%{ for ip in apache_servers ~}
 ${ip}
 %{ endfor ~}
 
 [nginx_servers]
-%{ for ip in nginx_ips ~}
+%{ for ip in nginx_servers ~}
 ${ip}
 %{ endfor ~}
-
-
 
 [apache_servers:vars]
 ansible_user=ubuntu
