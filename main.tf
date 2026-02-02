@@ -122,7 +122,7 @@ resource "aws_security_group" "web" {
 ###################
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "webserver-key-02"
+  key_name   = "webserver-key"
   public_key = file(var.public_key_path)
 }
 
