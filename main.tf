@@ -130,7 +130,6 @@ resource "aws_key_pair" "deployer" {
   }
 }
 
-
 ###################
 # EC2 Instances - Apache Servers
 ###################
