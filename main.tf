@@ -121,14 +121,16 @@ resource "aws_security_group" "web" {
 # SSH Key Pair
 ###################
 
-resource "aws_key_pair" "deployer" {
-  key_name   = "webserver-key"
-  public_key = file(var.public_key_path)
+resource "aws_instance" "web" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  key_name      = "webserver-key"
 
   tags = {
-    Name = "webserver-key"
+    Name = "webserver"
   }
 }
+``
 
 ###################
 # EC2 Instances - Apache Servers
